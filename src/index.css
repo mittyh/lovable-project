@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Modern Minimalist with Bold Typography */
+    --background: 0 0% 96.5%; /* #F5F5F7 */
+    --foreground: 0 0% 0%; /* #000000 */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    
+    /* Deep Black primary */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Cobalt Blue for interactive elements */
+    --secondary: 227 100% 59%; /* #2D5BFF */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 35%;
+    
+    /* Cobalt Blue accent */
+    --accent: 227 100% 59%; /* #2D5BFF */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Electric Neon Yellow highlight */
+    --highlight: 66 100% 52%; /* #EAFF00 */
+    --highlight-foreground: 0 0% 0%;
+    
+    /* Info block background - Pure White */
+    --info-block: 0 0% 100%; /* #FFFFFF */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 0%;
+    --input: 0 0% 85%;
+    --ring: 227 100% 59%;
+    
+    --radius: 0.25rem;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 227 100% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 227 100% 59%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 227 100% 59%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 227 100% 59%;
+    --accent-foreground: 0 0% 100%;
+    --highlight: 66 100% 52%;
+    --highlight-foreground: 0 0% 0%;
+    
+    /* Info block background - Dark mode */
+    --info-block: 0 0% 12%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 227 100% 59%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 227 100% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 227 100% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Typography scale - Bold approach */
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95];
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl font-bold tracking-tight leading-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply text-lg font-semibold tracking-tight;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Section spacing */
+  .section {
+    @apply py-24 md:py-36;
+  }
+
+  .section-tight {
+    @apply py-12 md:py-20;
+  }
+
+  /* Container */
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-6;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-6 md:px-8;
+  }
+
+  /* Text styles */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-display {
+    @apply text-foreground font-black tracking-tighter;
+  }
+
+  .text-body {
+    @apply text-muted-foreground leading-relaxed;
+  }
+
+  .text-caption {
+    @apply text-xs text-muted-foreground tracking-[0.2em] uppercase font-medium;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Card hover with L-shaped accents */
+  .card-hover {
+    @apply transition-all duration-300 ease-out relative;
+  }
+
+  .card-hover::before,
+  .card-hover::after {
+    content: '';
+    @apply absolute w-6 h-6 border-foreground opacity-0 transition-opacity duration-300;
+  }
+
+  .card-hover::before {
+    @apply top-0 left-0 border-l-2 border-t-2;
+  }
+
+  .card-hover::after {
+    @apply bottom-0 right-0 border-r-2 border-b-2;
+  }
+
+  .card-hover:hover::before,
+  .card-hover:hover::after {
+    @apply opacity-100;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1;
+  }
+
+  /* Link underline animation - Cobalt Blue */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent origin-left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .link-underline:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Highlight underline for key words */
+  .highlight-underline {
+    @apply relative inline-block;
+    text-decoration-line: underline;
+    text-decoration-color: hsl(var(--accent));
+    text-decoration-thickness: 4px;
+    text-underline-offset: 4px;
+  }
+
+  /* Neon highlight bar */
+  .highlight-bar {
+    @apply relative;
+  }
+
+  .highlight-bar::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-full h-1 bg-highlight;
+  }
+
+  /* Decorative elements */
+  .deco-plus {
+    @apply text-highlight font-mono text-sm;
+  }
+
+  .deco-plus::before {
+    content: '+';
+  }
+
+  /* Fade up animation */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-fade-up-delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-fade-up-delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .animate-fade-up-delay-4 {
+    animation-delay: 0.4s;
+  }
+
+  /* Swiss-inspired grid line */
+  .grid-line {
+    @apply relative;
+  }
+
+  .grid-line::before {
+    content: '';
+    @apply absolute top-0 left-0 w-px h-full bg-border/20;
+  }
+
+  /* Project card styles */
+  .project-card {
+    @apply bg-card border border-border/10 rounded shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300;
+  }
+
+  .project-card:hover {
+    @apply shadow-[0_8px_30px_rgba(0,0,0,0.08)] -translate-y-1;
+  }
+
+  /* Tag/label styles */
+  .tag {
+    @apply text-xs px-2 py-1 bg-accent text-accent-foreground font-medium tracking-wide;
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth image loading */
+img {
+  @apply transition-opacity duration-300;
+}
+
+img[loading] {
+  @apply opacity-0;
+}
+
+/* Selection - Neon Yellow */
+::selection {
+  background: hsl(var(--highlight));
+  color: hsl(var(--highlight-foreground));
+}
+
+/* Dashed decorative line */
+.deco-dashed {
+  @apply border-dashed border-highlight;
+}
+
+/* Progress bar style */
+.progress-bar {
+  @apply h-1 bg-highlight;
+}
