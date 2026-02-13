@@ -281,8 +281,8 @@ const NewOTCCaseStudy = () => {
                 <div
                   key={i}
                   className={`p-5 rounded-lg border flex items-start gap-4 ${item.highlight
-                      ? 'bg-emerald-500/10 border-emerald-500/30'
-                      : 'bg-zinc-900/30 border-zinc-800/30'
+                    ? 'bg-emerald-500/10 border-emerald-500/30'
+                    : 'bg-zinc-900/30 border-zinc-800/30'
                     }`}
                 >
                   <span className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${item.highlight ? 'bg-emerald-400' : 'bg-zinc-600'}`} />

@@ -59,7 +59,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="/Mitty (XiaoYu) Huang Product Designer - CV.pdf"
+                href="/Mitty_Huang_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground rounded font-semibold 

@@ -28,7 +28,7 @@ const Footer = () => {
               Email
             </a>
             <a
-              href="/Mitty (XiaoYu) Huang Product Designer - CV.pdf"
+              href="/Mitty_Huang_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-xs text-muted-foreground hover:text-accent transition-colors"
