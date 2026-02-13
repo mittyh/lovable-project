@@ -78,8 +78,8 @@ const NewOTCCaseStudy = () => {
       <main className="pt-32 pb-24">
         {/* Header */}
         <section className="container-wide mb-16">
-          <Link 
-            to="/#works" 
+          <Link
+            to="/#works"
             className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -101,7 +101,7 @@ const NewOTCCaseStudy = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6">
             NewOTC — A 0→1 Experimental<br className="hidden md:block" /> Crypto Exchange MVP
           </h1>
-          
+
           <p className="text-xl text-zinc-400 max-w-3xl">
             Designing trust and clarity for a decentralized value transfer platform
           </p>
@@ -259,9 +259,8 @@ const NewOTCCaseStudy = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-cyan-400' : 'bg-zinc-600 hover:bg-zinc-500'
-                    }`}
+                    className={`w-2 h-2 rounded-full transition-colors ${index === currentSlide ? 'bg-cyan-400' : 'bg-zinc-600 hover:bg-zinc-500'
+                      }`}
                   />
                 ))}
               </div>
@@ -279,13 +278,12 @@ const NewOTCCaseStudy = () => {
                 { insight: "Users want fast cross-border value movement with high trust", highlight: false },
                 { insight: "The brand must feel calm, powerful, and reliable — not speculative", highlight: true }
               ].map((item, i) => (
-                <div 
-                  key={i} 
-                  className={`p-5 rounded-lg border flex items-start gap-4 ${
-                    item.highlight 
-                      ? 'bg-emerald-500/10 border-emerald-500/30' 
+                <div
+                  key={i}
+                  className={`p-5 rounded-lg border flex items-start gap-4 ${item.highlight
+                      ? 'bg-emerald-500/10 border-emerald-500/30'
                       : 'bg-zinc-900/30 border-zinc-800/30'
-                  }`}
+                    }`}
                 >
                   <span className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${item.highlight ? 'bg-emerald-400' : 'bg-zinc-600'}`} />
                   <span className={item.highlight ? 'text-white' : 'text-zinc-400'}>{item.insight}</span>
@@ -305,7 +303,7 @@ const NewOTCCaseStudy = () => {
                 "Digital Value Transfer (DVT) —<br />
                 <span className="text-zinc-400">Value should move as freely as information."</span>
               </h2>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
                 {["Decentralization", "Free Trading", "Speed", "Transparency", "High Trust", "Automation"].map((value) => (
                   <div key={value} className="text-center p-4 bg-zinc-800/30 rounded-lg border border-zinc-700/30">
@@ -350,7 +348,7 @@ const NewOTCCaseStudy = () => {
         {/* Brand Strategy */}
         <section className="container-wide mb-24">
           <h2 className="text-3xl md:text-4xl font-medium mb-12">Brand & Visual Strategy</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
               <h3 className="text-xl font-medium mb-6 text-zinc-300">Brand Personality</h3>
@@ -361,7 +359,7 @@ const NewOTCCaseStudy = () => {
                   </span>
                 ))}
               </div>
-              
+
               <div className="mt-8 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800/50">
                 <span className="text-xs uppercase tracking-wider text-zinc-500 mb-3 block">Brand Metaphor</span>
                 <p className="text-lg text-white italic">
@@ -369,7 +367,7 @@ const NewOTCCaseStudy = () => {
                 </p>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-medium mb-6 text-zinc-300">Design Direction</h3>
               <ul className="space-y-4">
@@ -392,7 +390,7 @@ const NewOTCCaseStudy = () => {
         {/* UI Design System */}
         <section className="container-wide mb-24">
           <h2 className="text-3xl md:text-4xl font-medium mb-12">UI & Design System</h2>
-          
+
           {/* Moodboard & Color System */}
           <div className="mb-12">
             <h3 className="text-xl font-medium mb-6 text-zinc-300">Moodboard, Color & Typography</h3>
@@ -433,7 +431,7 @@ const NewOTCCaseStudy = () => {
         {/* Results & Learning */}
         <section className="container-wide mb-24">
           <h2 className="text-3xl md:text-4xl font-medium mb-12">Result & Learning</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div>
               <h3 className="text-xl font-medium mb-6 text-zinc-300">Outcome</h3>
@@ -451,7 +449,7 @@ const NewOTCCaseStudy = () => {
                 ))}
               </ul>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-medium mb-6 text-zinc-300">Key Learnings</h3>
               <ul className="space-y-4">
@@ -515,22 +513,22 @@ const NewOTCCaseStudy = () => {
               © {new Date().getFullYear()} Mitty Huang. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a 
-                href="https://www.linkedin.com/in/mittyhuang/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/mittyhuang/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors text-sm"
               >
                 LinkedIn
               </a>
-              <a 
+              <a
                 href="mailto:shiaoyuhuang@gmail.com"
                 className="text-zinc-500 hover:text-white transition-colors text-sm"
               >
                 Email
               </a>
-              <a 
-                href="/Mitty_Huang_Resume.pdf"
+              <a
+                href="/Mitty (XiaoYu) Huang Product Designer - CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors text-sm"

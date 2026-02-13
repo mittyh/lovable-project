@@ -20,16 +20,16 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto text-center">
           <ScrollReveal>
             <p className="text-caption mb-4">Contact</p>
-            
+
             <h2 className="text-display-md md:text-display-lg mb-6">
               Let's work{" "}
               <span className="highlight-underline">together</span>
             </h2>
           </ScrollReveal>
-          
+
           <ScrollReveal delay={100}>
             <p className="font-mono text-muted-foreground text-sm md:text-base mb-14 leading-relaxed">
-              I'm open to senior product design roles, especially with teams building 
+              I'm open to senior product design roles, especially with teams building
               meaningful products at scale. Based in Taiwan, open to remote opportunities globally.
             </p>
           </ScrollReveal>
@@ -59,7 +59,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="/Mitty_Huang_Resume.pdf"
+                href="/Mitty (XiaoYu) Huang Product Designer - CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground rounded font-semibold 
